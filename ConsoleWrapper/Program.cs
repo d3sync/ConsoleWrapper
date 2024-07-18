@@ -45,16 +45,16 @@ namespace ConsoleWrapper
 
         static async Task Main(string[] args)
         {
-            // Disable QuickEdit mode
-            DisableQuickEditMode();
-            // Disable the close button
-            DisableCloseButton();
             if (Properties.Settings.Default.HideAppWrapperConsole)
             {
                 // Hide the wrapper console window
                 var handle = GetConsoleWindow();
                 ShowWindow(handle, SW_HIDE);
             }
+            // Disable QuickEdit mode
+            DisableQuickEditMode();
+            // Disable the close button
+            DisableCloseButton();
             // Start the stopwatch
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
